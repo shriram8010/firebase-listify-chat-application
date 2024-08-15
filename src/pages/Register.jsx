@@ -18,6 +18,7 @@ const Register = () => {
     const email = e.target[1].value;
     const password = e.target[2].value;
     const file = e.target[3].files[0];
+    console.log(file)
 
     try {
       //Create user
@@ -65,10 +66,10 @@ const Register = () => {
         <span className="logo">Listify Chat</span>
         <span className="title">Register</span>
         <form onSubmit={handleSubmit}>
-          <input required type="text" placeholder="display name" />
-          <input required type="email" placeholder="email" />
-          <input required type="password" placeholder="password" />
-          <input required style={{ display: "none" }} type="file" id="file" />
+          <input required type="text"  label="username" placeholder="display name" />
+          <input required type="email" label="useremail" placeholder="email" />
+          <input required type="password" label="userpassword" placeholder="password" />
+          <input style={{ display: "none" }} type="file" id="file" />
           <label htmlFor="file">
             <img src={Add} alt="" />
             <span>Add an avatar</span>
